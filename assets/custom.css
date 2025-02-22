@@ -1,0 +1,32 @@
+/* DatePicker styling: force dark background and white text */
+.DatePickerSingle,
+.DatePickerSingle .DateInput_input,
+.DatePickerSingle .DateInput,
+.DatePickerSingle_input,
+.DatePickerSingle_input input {
+    background-color: #2c2f33 !important;
+    color: white !important;
+    border: 1px solid #444 !important;
+}
+
+/* Dropdown control styling */
+.Select-control {
+    background-color: #3a3f44 !important;
+    color: white !important;
+    border: 1px solid #444 !important;
+}
+.Select-menu-outer {
+    background-color: #2c2f33 !important;
+    color: white !important;
+}
+.Select--single > .Select-control .Select-value,
+.Select-value-label {
+    color: white !important;
+}
+.VirtualizedSelectOption {
+    background-color: #2c2f33 !important;
+    color: white !important;
+}
+.Select-placeholder {
+    color: #aaa !important;
+}
