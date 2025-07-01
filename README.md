@@ -1,9 +1,61 @@
-Motivations:
+# Backtesting Tool for Trading Strategies
 
-I want to be able to hypothesise, for example "when 'Asset X' is trading in a range (which must also be defined), it is more probable that any wick (upside or downside), in a given timeframe, will be filled within a set amount of time – and therefore can use this idea to be profitable".
+A modular backtesting tool built with Python for simulating and analyzing trading strategies using historical data.
 
--> Then assess this hypothesis with a thorough backtest, and decide if true.
+## Motivations
 
-I want to be able to build this tool to a stage where these hypothesis can be created, then tested and evaluated.
+This project stems from a desire to rigorously test trading hypotheses in a structured, data-driven way.
 
-I'm very much running with the assumption here that it will be very hard, if not impossible, to build a trading bot whereby you just deploy it and leave it and it will be profitable. I think it is much more reasonable to assume that we could find certain scenarios where deploying the bot will be profitable, but the market conditions must be monitored and trading should stop if pre-defined 'optimal' conditions are no longer present.
+For example:  
+> "When Asset X is trading within a defined range, any wick (upward or downward) in a given timeframe is likely to be filled within a set period — making it a potentially profitable entry."
+
+The goal is to build a tool flexible enough to:
+- Formulate hypotheses like this,
+- Backtest them under various market conditions,
+- Evaluate performance using statistical measures.
+
+I’m working under the assumption that fully automated, always-on profitable trading bots are rare — if they exist at all. A more realistic approach is to:
+- Identify conditions where a strategy performs well,
+- Deploy it only when those conditions are present,
+- Continuously monitor and disable it when the market shifts.
+
+This tool is intended to support that kind of hypothesis-driven, adaptable trading workflow.
+
+## Features
+
+- Load and preprocess historical price data
+- Define and plug in custom trading strategies
+- Visualize strategy performance with plots
+- Track key metrics like win/loss ratio and returns
+
+## Tech Stack
+
+- Python
+- Matplotlib / Plotly
+- Pytest
+- Custom modular architecture
+
+## Getting Started
+
+### Installation
+pip install -r requirements.txt
+
+### Usage
+python app.py
+
+Modify `strategies.py` to define your own logic or use examples provided in `strategy_settings.py`.
+
+## Testing
+pytest
+
+## Project Structure
+
+- app.py — Entry point
+- backtester.py — Core backtesting engine
+- strategies.py — Custom strategy definitions
+- plot_utils.py — Visualization utilities
+- data_fetcher.py — Market data handling
+
+## Author
+
+Thomas Haile — GitHub: @thomasih
